@@ -25,78 +25,90 @@ Execute the necessary commands/batch file for the desired output.
 Create a directory named "my-folder"
 
 ## COMMAND AND OUTPUT
+~~~
 mkdir my-folder
+~~~
 ![alt text](<img/scr 1.png>)
 Remove the directory "my-folder"
 
 ## COMMAND AND OUTPUT
-rmdi![alt text](<img/scr 2.png>)r my-folder
-
+~~~
+rmdir my-folder
+~~~
+![alt text](<img/scr 2.png>)
 
 Create the file Rose.txt
 
 ## COMMAND AND OUTPUT
+~~~
 COPY CON Rose.txt
 A clock in a office can never get stolen
 Too many employees watch it all the time
 ^Z
 
 dir Rose.txt
+~~~
 ![alt text](<img/scr 3.png>)
 
 Create the file hello.txt using echo and redirection
 
 ## COMMAND AND OUTPUT
+~~~
 echo “hello world” > hello.txt
 type hello.txt
-
+~~~
 ![alt text](<img/scr 4.png>)
 
 Copy the file hello.txt into the file hello1.txt
 
 ## COMMAND AND OUTPUT
+~~~
 copy hello.txt hello1.txt
-
+~~~
 ![alt text](<img/scr 5.png>)
 
 Remove the file hello1.txt
 
 ## COMMAND AND OUTPUT
+~~~
 del hello1.txt
-
+~~~
 ![alt text](<img/scr 6.png>)
 
 List out the file hello1.txt in the current directory
 
 ## COMMAND AND OUTPUT
+~~~
 dir hello1.txt
-
+~~~
 ![alt text](<img/scr 7.png>)
 
 List out all the associated file extensions 
 
 ## COMMAND AND OUTPUT
+~~~
 assoc | more
-
+~~~
 ![alt text](<img/scr 8.png>)
 
 Compare the file hello.txt and rose.txt
 
 ## COMMAND AND OUTPUT
+~~~
 fc hello.txt Rose.txt
-
+~~~
 ![alt text](<img/scr 9.png>)
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
 
-
+~~~
 @echo off
 set name=John
 echo Hello, %name%!
 pause
 
-
+~~~
 ## OUTPUT
 ![alt text](<img/scr 10.png>)
 
@@ -109,7 +121,7 @@ Ask the user if they want to check another number.
 Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
 Handle invalid inputs for the continuation prompt (Y/N) gracefully.
 
-
+~~~
 @echo off
 :main
 set /p number=Enter a number: 
@@ -130,21 +142,21 @@ goto choice
 echo Thank you for using the odd number checker!
 pause
 
-
+~~~
 ## OUTPUT
 
 ![alt text](<img/scr 11.png>)
 
 
 Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
-
+~~~
 
 @echo off
 for %%i in (1 2 3 4 5) do (
     echo Number: %%i
 )
 pause
-
+~~~
 
 ## OUTPUT
 ![alt text](<img/scr 12.png>)
@@ -159,6 +171,7 @@ Make sure the script works for files located in the same directory as the batch 
 Use pause to keep the command window open after displaying the message.
 Expected Output (if the file exists):
 
+~~~
 @echo off
 if exist sample.txt (
     echo sample.txt exists.
@@ -166,7 +179,7 @@ if exist sample.txt (
     echo sample.txt does not exist.
 )
 pause
-
+~~~
 
 ## OUTPUT
 ![alt text](<img/scr 13.png>)
@@ -177,7 +190,7 @@ Create a File – Creates a file named newfile.txt with the content This is a ne
 Exit – Exits the script with a goodbye message
 The script should repeatedly display the menu until the user chooses to exit. Use goto statements to handle menu navigation.
 
-
+~~~
 @echo off
 :menu
 echo 1. Say Hello
@@ -200,7 +213,7 @@ goto menu
 echo Goodbye!
 pause
 
-
+~~~
 ## OUTPUT
 ![alt text](<img/scr 14.png>)
 
